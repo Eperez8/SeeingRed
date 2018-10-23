@@ -38,18 +38,20 @@ int main(int argc, char* argv[])
                     for(int column = 0; column < imagePixels[0].size(); column++)
                     {
                             Pixel color;
+                           
                             color = imagePixels[row][column];
                             color.green = 0;
+                            
                             color.blue = 0;
                             imagePixels[row][column] = color;
                     }
             }
             image.fromPixelMatrix(imagePixels);
             image.save("redness.bmp");
-            }
-        }
+            
+       }
 
-
+}
 
   return 0;
 }
